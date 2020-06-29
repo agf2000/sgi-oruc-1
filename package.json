@@ -1,0 +1,54 @@
+{
+	"name": "oruc-softek",
+	"version": "0.0.1",
+	"description": "A sync app for integration SGI with Oruc.com.br",
+	"main": "main.js",
+	"scripts": {
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder --win --ia32",
+		"production": "SET NODE_ENV=production & electron .",
+		"start": "SET NODE_ENV=development & electron ."
+	},
+	"repository": "https://github.com/electron/electron-quick-start",
+	"author": "GitHub",
+	"license": "CC0-1.0",
+	"devDependencies": {
+		"devtron": "^1.4.0",
+		"electron": "^8.2.4",
+		"electron-builder": "^22.6.0"
+	},
+	"dependencies": {
+		"axios": "^0.19.2",
+		"electron-devtools-installer": "^3.0.0",
+		"electron-json-storage": "^4.1.8",
+		"electron-log": "^4.2.0",
+		"electron-updater": "^4.3.1",
+		"emailjs": "^3.0.0",
+		"fs-extra": "^9.0.0",
+		"he": "^1.2.0",
+		"metro4": "^4.3.6",
+		"moment": "^2.25.3",
+		"mssql": "^6.2.0",
+		"node-notifier": "^7.0.0",
+		"nprogress": "^0.2.0",
+		"progress": "^2.0.3"
+	},
+	"build": {
+		"appId": "com.br.softernet.sincronizadororuc",
+		"publish": [
+			{
+				"provider": "generic",
+				"url": "http://sgi.winconnection.net:8081/SGI_Sincronizador_Oruc"
+			}
+		],
+		"productName": "SGI Sincronizador Oruc",
+		"copyright": "© 2020 Softek Automação Cormecial",
+		"nsis": {
+			"perMachine": false,
+			"oneClick": false,
+			"allowToChangeInstallationDirectory": false,
+			"artifactName": "SGI_Sincronizador_Oruc_Setup_${version}.${ext}",
+			"shortcutName": "Sincroniza SGI Oruc"
+		}
+	}
+}

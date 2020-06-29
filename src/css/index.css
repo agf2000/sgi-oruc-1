@@ -1,0 +1,193 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	user-select: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+body {
+	background-color: #ecf0f5;
+	font-family: Roboto, sans-serif;
+	color: #333;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	min-height: 100px;
+}
+
+.headerTitle {
+	width: 100%;
+}
+
+.header h3 {
+	margin-left: 20px;
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.breadcrums {
+	width: 60%;
+	margin-right: 20px;
+	font-weight: 600;
+}
+
+.breadcrums li:nth-child(1) {
+	padding-top: 3px;
+}
+
+.breadcrums li:nth-child(1) a:after {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f054';
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	vertical-align: middle;
+	font-weight: 900;
+}
+
+.breadcrums ul {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+section {
+	background-color: #fff;
+	padding: 20px;
+}
+
+.sectionHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.sectionHeader button {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.k-dirty {
+	display: none;
+}
+
+input[type='date']::-webkit-inner-spin-button {
+	display: none;
+	-webkit-appearance: none;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: #ccc;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+}
+
+select {
+	border: 1px solid #ccc;
+	margin: 0.5em;
+	border-radius: 6px 6px 0 0;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.fancyInput {
+	border: 1px solid #ccc;
+	border-radius: 6px 6px 0 0;
+	padding: 8px;
+	font-size: 16px;
+}
+
+.dashboard {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.dashBox {
+	position: relative;
+	align-self: center;
+	height: 100px;
+	padding-top: 28px;
+	color: #fff;
+	width: 350px;
+}
+
+.dashBox .content {
+	font-size: 32px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.dashBox .icon span {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 50px;
+	color: rgb(0, 0, 0, 0.15);
+}
+
+.dashFont {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.dashBoxGreen {
+	background-color: rgb(96, 169, 23);
+	margin-bottom: 20px;
+}
+
+.dashBoxOrange {
+	background-color: rgb(250, 104, 0);
+	margin-bottom: 20px;
+}
+
+.dashBoxRed {
+	background-color: rgb(206, 53, 44);
+	margin-bottom: 20px;
+}
+
+.dashBoxBlue {
+	background-color: rgb(27, 161, 226);
+	margin-bottom: 20px;
+}
+
+.dashBox .bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.15);
+	height: 25px;
+	text-align: right;
+}
+
+.radioFlex {
+	width: 100%;
+	display: inline-block;
+}

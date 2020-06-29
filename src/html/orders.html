@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+		<!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
+		<!-- <link rel="stylesheet" href="../lib/metro4/css/metro-all.min.css" /> -->
+		<link rel="stylesheet" href="../fonts/roboto.css" />
+		<link rel="stylesheet" href="../lib/fontawesome/css/all.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../lib/kendo/styles/kendo.common.min.css" />
+		<link rel="stylesheet" href="../lib/kendo/styles/kendo.flat.min.css" />
+		<title>SGI - Oruc Pedidos!</title>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div class="header">
+					<div class="headerTitle">
+						<h3>SGI - Oruc Pedidos</h3>
+					</div>
+
+					<div class="breadcrums">
+						<ul>
+							<li>
+								<a href="#"><span class="fas fa-tachometer-alt"></span></a>
+							</li>
+							<li><a href="#" onclick="javascript: openPanelWindow(); return false;">Painel</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<section>
+					<div class="sectionHeader">
+						<div><span>Data Inicial:</span> <input id="iniDate" class="fancyInput" type="date" /></div>
+						<div><span>Data Final:</span> <input id="finDate" class="fancyInput" type="date" /></div>
+						<div>
+							Status:
+							<select class="statuses custom-select">
+								<option value="novo" selected>Novo</option>
+								<option value="pago">Pago</option>
+								<option value="entregue">Enviado</option>
+								<option value="separacao">Em Separação</option>
+								<option value="concluido">Concluido</option>
+								<option value="cancelado">Cancelado</option>
+							</select>
+						</div>
+						<button id="submitButton"><span class="fas fa-arrow-right"></span></button>
+					</div>
+
+					<div id="sgiSales"></div>
+				</section>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer">
+				<div>SOFTEK ©2020 - Todos direitos reservados</div>
+				<div id="appVersion">Versão 0.0.1</div>
+			</div>
+		</footer>
+
+		<!-- You can also require other files to run in this process -->
+		<script>
+			var eRequire = require;
+			window.$ = window.jQuery = require('../lib/jquery/jquery-3.4.1.min.js');
+		</script>
+		<!-- <script src="../lib/metro4/js/metro.min.js"></script>
+		<script src="../js/charts.js"></script> -->
+		<script src="../lib/kendo/js/kendo.all.min.js"></script>
+		<script src="../lib/kendo/js/cultures/kendo.culture.pt-BR.min.js"></script>
+		<script src="../lib/kendo/js/messages/kendo.messages.pt-BR.min.js"></script>
+		<script src="../js/renderer.js"></script>
+	</body>
+</html>
