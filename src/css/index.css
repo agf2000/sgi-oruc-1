@@ -18,16 +18,19 @@ body {
 	background-color: #ecf0f5;
 	font-family: Roboto, sans-serif;
 	color: #333;
+	font-size: 14px;
 }
 
 .header {
-	display: flex;
-	align-items: center;
-	min-height: 100px;
+	margin: 30px 20px 10px 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 30px;
 }
 
-.headerTitle {
-	width: 100%;
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .header h3 {
@@ -37,13 +40,10 @@ body {
 }
 
 .breadcrums {
-	width: 60%;
-	margin-right: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	font-weight: 600;
-}
-
-.breadcrums li:nth-child(1) {
-	padding-top: 3px;
 }
 
 .breadcrums li:nth-child(1) a:after {
@@ -63,22 +63,23 @@ body {
 	align-items: flex-end;
 }
 
-section {
-	background-color: #fff;
-	padding: 20px;
-}
-
-.sectionHeader {
+.datesContainer {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 20px;
+	align-items: flex-end;
+	margin: 0 20px;
 }
 
-.sectionHeader button {
+.datesContainer button {
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 6px;
+	background-color: #eee;
+}
+
+.datesContainer button span {
+	font-size: 18px;
+	color: #333;
 }
 
 .k-dirty {
@@ -91,103 +92,113 @@ input[type='date']::-webkit-inner-spin-button {
 }
 
 footer {
+	box-sizing: border-box;
 	position: fixed;
 	bottom: 0;
 	background-color: #ccc;
 	margin-top: 10px;
+	padding: 0 10px;
 	width: 100%;
 }
 
-.footer {
+footer div {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 5px 10px;
+	height: 25px;
 }
 
 select {
 	border: 1px solid #ccc;
-	margin: 0.5em;
-	border-radius: 6px 6px 0 0;
 	padding: 10px;
 	font-size: 16px;
 }
 
 .fancyInput {
 	border: 1px solid #ccc;
-	border-radius: 6px 6px 0 0;
 	padding: 8px;
 	font-size: 16px;
 }
 
 .dashboard {
 	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	width: 100%;
+	color: #fff;
+	overflow: hidden;
 }
 
 .dashBox {
+	min-height: 110px;
+	min-width: 180px;
 	position: relative;
-	align-self: center;
-	height: 100px;
-	padding-top: 28px;
-	color: #fff;
-	width: 350px;
 }
 
 .dashBox .content {
-	font-size: 32px;
-	font-weight: bold;
-	padding-left: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.dashBox .icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
 
 .dashBox .icon span {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-size: 50px;
-	color: rgb(0, 0, 0, 0.15);
+	font-size: 42px;
+	color: #333;
+	opacity: 0.5;
 }
 
 .dashFont {
+	padding-left: 10px;
+}
+
+.dashFont h2 {
 	display: block;
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 400;
 }
 
+.dashFont div {
+	font-size: 12px;
+	margin-top: 5px;
+}
+
 .dashBoxGreen {
-	background-color: rgb(96, 169, 23);
-	margin-bottom: 20px;
+	background-color: #60a917;
 }
 
 .dashBoxOrange {
-	background-color: rgb(250, 104, 0);
-	margin-bottom: 20px;
+	background-color: #fa6800;
 }
 
 .dashBoxRed {
-	background-color: rgb(206, 53, 44);
-	margin-bottom: 20px;
+	background-color: #ce352c;
 }
 
 .dashBoxBlue {
-	background-color: rgb(27, 161, 226);
-	margin-bottom: 20px;
+	background-color: #1ba1e2;
 }
 
 .dashBox .bar {
+	height: 15px;
+	width: 180px;
+	background-color: #333;
+	opacity: 0.3;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.15);
-	height: 25px;
-	text-align: right;
 }
 
 .radioFlex {
 	width: 100%;
 	display: inline-block;
+}
+
+.sgiSales {
+	margin: 10px;
 }

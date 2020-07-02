@@ -9,7 +9,7 @@
 		"production": "SET NODE_ENV=production & electron .",
 		"start": "SET NODE_ENV=development & electron ."
 	},
-	"repository": "https://github.com/electron/electron-quick-start",
+	"repository": "https://github.com/agf2000/sgi-oruc-1.git",
 	"author": "GitHub",
 	"license": "CC0-1.0",
 	"devDependencies": {

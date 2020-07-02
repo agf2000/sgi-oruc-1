@@ -7,7 +7,7 @@
 		<!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
 		<!-- <link rel="stylesheet" href="../lib/metro4/css/metro-all.min.css" /> -->
 		<link rel="stylesheet" href="../fonts/roboto.css" />
-		<link rel="stylesheet" href="../lib/fontawesome/css/all.css" />
+		<link rel="stylesheet" href="../lib/fontawesome/css/all.min.css" />
 		<link rel="stylesheet" href="../css/index.css" />
 		<link rel="stylesheet" href="../lib/kendo/styles/kendo.common.min.css" />
 		<link rel="stylesheet" href="../lib/kendo/styles/kendo.flat.min.css" />
@@ -16,28 +16,29 @@
 	<body>
 		<div>
 			<div>
-				<div class="header">
-					<div class="headerTitle">
-						<h3>SGI - Oruc Pedidos</h3>
-					</div>
+				<header class="header">
+					<div class="headerContainer">
+						<h3>SGI Pedidos</h3>
 
-					<div class="breadcrums">
-						<ul>
-							<li>
-								<a href="#"><span class="fas fa-tachometer-alt"></span></a>
+						<ul class="breadcrums">
+							<li style="margin-right: 15px;">
+								<span class="fas fa-tachometer-alt"></span>
+							</li>
+							<li style="margin-right: 10px;">
+								<a href="#"><span class="fas fa-chevron-right"></span></a>
 							</li>
 							<li><a href="#" onclick="javascript: openPanelWindow(); return false;">Painel</a></li>
 						</ul>
 					</div>
-				</div>
+				</header>
 
 				<section>
-					<div class="sectionHeader">
+					<div class="datesContainer">
 						<div><span>Data Inicial:</span> <input id="iniDate" class="fancyInput" type="date" /></div>
 						<div><span>Data Final:</span> <input id="finDate" class="fancyInput" type="date" /></div>
 						<div>
 							Status:
-							<select class="statuses custom-select">
+							<select class="statuses select">
 								<option value="novo" selected>Novo</option>
 								<option value="pago">Pago</option>
 								<option value="entregue">Enviado</option>
@@ -46,16 +47,20 @@
 								<option value="cancelado">Cancelado</option>
 							</select>
 						</div>
-						<button id="submitButton"><span class="fas fa-arrow-right"></span></button>
+						<button id="submitButton">
+							<span class="fas fa-arrow-right"></span>
+						</button>
 					</div>
 
-					<div id="sgiSales"></div>
+					<div class="sgiSales">
+						<div id="sgiSales"></div>
+					</div>
 				</section>
 			</div>
 		</div>
 
 		<footer>
-			<div class="footer">
+			<div>
 				<div>SOFTEK ©2020 - Todos direitos reservados</div>
 				<div id="appVersion">Versão 0.0.1</div>
 			</div>
